@@ -1,0 +1,32 @@
+<Students>
+  <Student id = "111">
+	<Name>David Cohen</Name>
+	<Courses>
+		<Course>
+			<Name>Introduction to OOP</Name>
+			<id>12345</id>
+		</Course>
+		<Course>
+			<Name>DB</Name>
+			<id>54343</id>
+		</Course>
+	</Courses>
+  </Student>
+  <Student id = "222">
+	<Name>Moshe Levi</Name>
+	<Courses>
+		<Course>
+			<Name>Introduction to OOP</Name>
+			<id>12345</id>
+		</Course>
+		<Course>
+			<Name>DB</Name>
+			<id>54343</id>
+		</Course>
+		<Course>
+			<Name>IP</Name>
+			<id>20333</id>
+		</Course>
+	</Courses>
+  </Student>
+</Students>

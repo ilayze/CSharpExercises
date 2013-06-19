@@ -1,0 +1,9 @@
+<CV>
+  <Name>David Cohen</Name>
+  <Birth>1.1.1980</Birth>
+  <Address>Ben Gurion st. 18 Tel Aviv</Address>
+  <Experience>
+	<Exp name = "IDF" from = "1.1.1998" to = "1.1.2000"/>
+	<Exp name = "Comverce" from = "2.1.2000" to = "now"/>
+  </Experience>
+</CV>

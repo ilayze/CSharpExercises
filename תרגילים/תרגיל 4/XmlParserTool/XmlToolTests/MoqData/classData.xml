@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Class name = "Car">
+  <Attributes>
+    <Attribute final = "yes" get = "yes" set = "no">
+      <Name>CAR_NUM</Name>
+      <Type>long</Type>
+      <AccMod>private</AccMod>
+    </Attribute>
+    <Attribute final = "no" get = "yes" set = "yes">
+      <Name>owner</Name>
+      <Type>String</Type>
+      <AccMod>private</AccMod>
+    </Attribute>
+    <Attribute final = "no" get = "yes" set = "yes">
+      <Name>km</Name>
+      <Type>int</Type>
+      <AccMod>private</AccMod>
+    </Attribute>
+  </Attributes>
+  <Constructors>
+    <Constructor>
+      <Parameters>
+        <Parameter>
+          <Name>id</Name>
+          <Type>long</Type>
+        </Parameter>
+        <Parameter>
+          <Name>owner</Name>
+          <Type>String</Type>
+        </Parameter>
+        <Parameter>
+          <Name>km</Name>
+          <Type>int</Type>
+        </Parameter>
+      </Parameters>
+    </Constructor>
+  </Constructors>
+  <Methods>
+    <Method>
+      <Name>sellCar</Name>
+      <AccMod>public</AccMod>
+      <Return>void</Return>
+      <Parameters/>
+    </Method>
+    <Method>
+      <Name>drive</Name>
+      <AccMod>public</AccMod>
+      <Return>void</Return>
+      <Parameters>
+        <Parameter>
+          <Name>km</Name>
+          <Type>int</Type>
+        </Parameter>
+      </Parameters>
+    </Method>
+  </Methods>
+</Class>
+

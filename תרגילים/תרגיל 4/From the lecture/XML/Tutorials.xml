@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tutorials>
+  <Tutorial id ="1">
+    <Name>Introduction to OOP</Name>
+    <Duration>30</Duration>
+    <Price>20</Price>
+  </Tutorial>
+  <Tutorial id ="2">
+    <Name>Classes and Objects</Name>
+    <Duration>30</Duration>
+    <Price>10</Price>
+  </Tutorial>
+</Tutorials>

@@ -1,0 +1,110 @@
+#raw1 {
+	BACKGROUND-COLOR: blue; WIDTH: 2000px; HEIGHT: 50px
+}
+#heads {
+	WIDTH: 1000px; HEIGHT: 50px
+}
+.names {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 45px; LIST-STYLE-TYPE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: white; VERTICAL-ALIGN: top; PADDING-TOP: 0px
+}
+#list {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#list LI {
+	POSITION: relative; LIST-STYLE-TYPE: none; WIDTH: 100px; DISPLAY: inline; HEIGHT: 50px
+}
+
+#leftSide{height:400;
+		width:230;
+		margin:20;
+		}
+#login{height:200;
+		width:230;
+		background-color:#e4e4e4;}
+
+.headerWelcome{font-family: Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		font-weight: bold;
+		color: ED1B24;
+		vertical-align: top;
+		text-indent: 1px;
+		margin-top: 0PX;
+		padding-top: 10px;}
+#loginLabel{height:100;
+		width:115;
+		line-height: 40px;}
+#userRectangle{height:30;
+		width:115;}
+#passwordRectengle{height:30;
+		width:115;}
+.in{height:23}
+
+#search{height:150;
+		width:230;
+		background-color:#e4e4e4;}
+		
+.innerHeader1, .innerHeader2 {
+	width: inherit;
+	font-size: 13px;
+	font-weight: 800;
+	margin-left:20;
+}
+
+.innerHeader1 {
+	color: black;
+}
+
+.fromThePress {
+	font-size: 13px;
+	width: 179px;
+	margin-top: 6px;
+	height: 101px;
+	background-size: 179px 135px;
+	background-repeat: no-repeat;
+	background-color: white;
+	text-align: justify;
+	line-height: 160%;
+	margin-left:20;
+}
+
+.fontsizeURL {
+    font-size: 14px;
+}
+
+.mainContent
+{
+     float: none;
+    position: absolute;
+    left: 300px;
+    top: 136px;
+    right: 52px;
+    bottom: 190px;
+    width: 1012px;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    color: #787878;
+    height: 616px;
+}
+
+.productsHeader
+{
+   text-decoration:underline;
+   font-family:@Batang;
+}
+
+
+.col1 {
+    width:85px;
+}
+
+.col2 {
+    width:93px;
+}
+
+.col3 {
+    width:242px;
+}
+
+.col4 {
+    width:40px;
+}
