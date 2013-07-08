@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{AFAD97D5-004D-4E78-9D4B-2EDE0B3A996F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFAD97D5-004D-4E78-9D4B-2EDE0B3A996F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAD97D5-004D-4E78-9D4B-2EDE0B3A996F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAD97D5-004D-4E78-9D4B-2EDE0B3A996F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAD97D5-004D-4E78-9D4B-2EDE0B3A996F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
