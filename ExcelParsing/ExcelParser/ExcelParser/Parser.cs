@@ -9,64 +9,62 @@ namespace ExcelParser
     class Parser
     {
         string excelFilePath;
+        string workSheetName;
+
+        const string defaultWorkSheet = "Services_Details";
 
         const string ChannelNumberColumn = "Ch# Number";
         const string ChannelNameColumn = "Channel Name";
         const string FixedChangeableColumn = "Fixed / Changeable";
 
         public Parser(string excelPath)
+            :this(excelPath, defaultWorkSheet)
+        {}
+        
+        public Parser(string excelPath,string workSheetName)
         {
             excelFilePath = excelPath;
+            this.workSheetName = workSheetName;
+
         }
 
-        public void Parse()
+        public void Parse(QueryBuilder builder)
         {
             var excel = new ExcelQueryFactory(excelFilePath);
             SetMapping(excel);
-            SetTransformation(excel);
+            //SetTransformation(excel);
 
-            var ChannelsMetadataList = from metadata in excel.Worksheet<ChannelMetadata>("Services_Details")
+            var ChannelsMetadataList = from metadata in excel.Worksheet<ChannelMetadataStrings>(workSheetName)
                         select metadata;
 
+            ChannelsMetadataList=builder.ExecuteQuery(ChannelsMetadataList);
+           
             foreach (var channel in ChannelsMetadataList)
             {
                 Console.WriteLine(channel.ChannelName);
             }
 
-
         }
+
+
 
         private void SetMapping(ExcelQueryFactory excel)
         {
-            excel.AddMapping<ChannelMetadata>(x => x.ChannelNumber, ChannelNumberColumn);
-            excel.AddMapping<ChannelMetadata>(x => x.ChannelName, ChannelNameColumn);
-            excel.AddMapping<ChannelMetadata>(x => x.Fixed, FixedChangeableColumn);
-            excel.AddMapping<ChannelMetadata>(x => x.VideoEncoding, "Video Encoding");
-            excel.AddMapping<ChannelMetadata>(x => x.Static, "Static / Dynamic");
-            excel.AddMapping<ChannelMetadata>(x => x.ClearOrScrambled, "Clear / Scrambled");
-            excel.AddMapping<ChannelMetadata>(x => x.EventsLength, "Events Length");
+            excel.AddMapping<ChannelMetadataStrings>(x => x.ChannelNumber, ChannelNumberColumn);
+            excel.AddMapping<ChannelMetadataStrings>(x => x.ChannelName, ChannelNameColumn);
+            excel.AddMapping<ChannelMetadataStrings>(x => x.Fixed, FixedChangeableColumn);
+            excel.AddMapping<ChannelMetadataStrings>(x => x.VideoEncoding, "Video Encoding");
+            excel.AddMapping<ChannelMetadataStrings>(x => x.Static, "Static / Dynamic");
+            excel.AddMapping<ChannelMetadataStrings>(x => x.ClearOrScrambled, "Clear / Scrambled");
+            excel.AddMapping<ChannelMetadataStrings>(x => x.EventsLength, "Events Length");
 
         }
 
         private void SetTransformation(ExcelQueryFactory excel)
         {
-            excel.AddTransformation<ChannelMetadata>(x => x.Fixed, (t) => t == "Fixed" ? true : false);
+            excel.AddTransformation<ChannelMetadataStrings>(x => x.Fixed, (t) => t == "Fixed" ? true : false);
         }
     }
-
-    public class ChannelMetadata
-    {
-        public int ChannelNumber { get; set; }
-        public string ChannelName { get; set; }
-        public bool Fixed { get; set; }
-        public string VideoEncoding { get; set; }
-        public string Static { get; set; }
-        public string ClearOrScrambled { get; set; }
-        public string EventsLength { get; set; }
-        public string VideoStreamType { get; set; }
-
-    }
-
 
 
     public class Person
